@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <div id="cesiumContainer"></div>
+        <script src="Build/CesiumUnminified/Cesium.js"></script>
+        <script>
+            const viewer = new Cesium.Viewer("cesiumContainer", {
+                baseLayer: Cesium.ImageryLayer.fromProviderAsync(
+                    Cesium.TileMapServiceImageryProvider.fromUrl(
+                    Cesium.buildModuleUrl("Assets/Textures/NaturalEarthII")
+                    )
+                ),
+                baseLayerPicker: false,
+                geocoder: false,
+            });
+        </script>
+    </body>
+</html>
